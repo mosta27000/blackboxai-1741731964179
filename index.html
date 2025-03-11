@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أذكار الصباح والمساء</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Amiri for Arabic text -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        amiri: ['Amiri', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Amiri', serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-emerald-600 text-white py-6 shadow-lg">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-bold text-center">أذكار الصباح والمساء</h1>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center space-x-4 rtl:space-x-reverse">
+                <button id="morningBtn" class="bg-emerald-500 text-white px-6 py-2 rounded-full hover:bg-emerald-600 transition duration-300">
+                    <i class="fas fa-sun ml-2"></i>أذكار الصباح
+                </button>
+                <button id="eveningBtn" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300">
+                    <i class="fas fa-moon ml-2"></i>أذكار المساء
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Morning Section -->
+        <section id="morningSection" class="space-y-6">
+            <h2 class="text-2xl font-bold text-emerald-600 mb-6 text-center">
+                <i class="fas fa-sun ml-2"></i>أذكار الصباح
+            </h2>
+            <div id="morningAdhkar" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Adhkar will be inserted here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Evening Section -->
+        <section id="eveningSection" class="space-y-6 hidden">
+            <h2 class="text-2xl font-bold text-blue-600 mb-6 text-center">
+                <i class="fas fa-moon ml-2"></i>أذكار المساء
+            </h2>
+            <div id="eveningAdhkar" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Adhkar will be inserted here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>تم تطويره بكل حب ❤️ للمسلمين</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/adhkar.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
